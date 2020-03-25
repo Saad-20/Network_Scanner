@@ -17,7 +17,7 @@ def scan(ip):
     # print(answered_list.summary())
 
 
-scan("192.168.100.1/24")
+scan("Put IP here")
 
 # arp_request.show()
 # broadcast.show()
