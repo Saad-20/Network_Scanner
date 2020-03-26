@@ -14,12 +14,14 @@ def scan(ip):
         # print ip address + print MAC address
         clients_dict = {"ip": element[1].psrc, "mac": element[1].hwsrc}
         clients_list.append(clients_dict)
-        return clients_list
+    return clients_list
 
 def print_result(results_list):
-    print("\tIP\t\t\t\tMAC Address\n---------------------------------------------------")
+    print("--------------------------------------------")
+    print("|\tIP\t\t    MAC Address\t   |\n--------------------------------------------")
+
     for client in results_list:
-        print(client)
+        print(client['ip'] + "\t\t" + client['mac'])
 
 read_scan_ip = raw_input("[+] Enter ip address to scan: ")
 scan_result = scan(read_scan_ip)
