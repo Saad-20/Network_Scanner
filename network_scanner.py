@@ -25,10 +25,12 @@ def print_result(results_list):
     for client in results_list:
         print(client['ip'] + "\t\t" + client['mac'])
 
-read_scan_ip = raw_input("[+] Enter ip address to scan: ")
-scan_result = scan(read_scan_ip)
-print_result(scan_result)
-
+try:
+    read_scan_ip = raw_input("[+] Enter ip address to scan: ")
+    scan_result = scan(read_scan_ip)
+    print_result(scan_result)
+except KeyboardInterrupt:
+    print("\nCTRL + C detected. Stopping Network Scanner ....... Please Wait")
 
 
 # arp_request.show()
